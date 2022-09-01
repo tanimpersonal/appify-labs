@@ -64,9 +64,11 @@ const Left = () => {
       <div className="app bg-white my-5 p-5">
         <h1>Suggested People</h1>
         <div className="profile flex items-center ">
-          <img src={noUser} alt="" className="rounded-full" />
+          <img src={noUser} alt="" className="rounded-full w-8 mr-2" />
           <p>Sadek Hossain</p>
-          <button className="flex-grow">ADD +</button>
+          <button className="flex-grow p-[0.7px] rounded-md ml-2 border-2 border-gray-400">
+            ADD+
+          </button>
         </div>
       </div>
     </div>
