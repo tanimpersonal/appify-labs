@@ -1,0 +1,19 @@
+.first {
+  background-image: url("../../assets/images/no-user.jpg");
+  /* mix-blend-mode: darken; */
+  background-color: gray;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.second {
+  background-image: url("../../assets/images/nature.jpg");
+  /* mix-blend-mode: darken; */
+  background-color: gray;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
