@@ -1,6 +1,15 @@
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBell,
+  faMessage,
+  faUserCircle,
+} from "@fortawesome/free-regular-svg-icons";
+import {
+  faChevronDown,
+  faHome,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 const NavMenu = () => {
   const firstStyle = {
     height: "15px",
@@ -8,6 +17,15 @@ const NavMenu = () => {
   const secondStyle = {
     height: "25px",
     width: "25px",
+  };
+
+  const [menu, setMenu] = useState(false);
+  const handleMenu = () => {
+    if (!menu) {
+      setMenu(true);
+    } else {
+      setMenu(false);
+    }
   };
   return (
     <nav
@@ -22,12 +40,12 @@ const NavMenu = () => {
   text-gray-500
   hover:text-gray-700
   focus:text-gray-700
-  shadow-lg
   navbar navbar-expand-lg navbar-light
   "
     >
-      <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+      <div className="w-[80%] mx-auto flex flex-wrap items-center justify-between px-6">
         <button
+          onClick={handleMenu}
           className="
       navbar-toggler
       text-gray-500
@@ -76,7 +94,7 @@ const NavMenu = () => {
         lg:mt-0
         mr-1
       "
-            href="#"
+            href="/"
           >
             <img
               src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
@@ -87,152 +105,75 @@ const NavMenu = () => {
           </a>
         </div>
 
-        <div className="flex items-center relative">
-          <a
-            className="text-gray-500 hover:text-gray-700 focus:text-gray-700 mr-4"
-            href="#"
-          >
-            <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
-          </a>
-          <div className="dropdown relative">
-            <a
+        {/* search */}
+        <div class={`${menu ? "my-5" : "hidden"} lg:flex mr-[100px]`}>
+          <div class="xl:w-96">
+            <input
+              type="search"
               className="
-          text-gray-500
-          hover:text-gray-700
-          focus:text-gray-700
-          mr-4
-          dropdown-toggle
-          hidden-arrow
-          flex items-center
-        "
-              href="#"
-              id="dropdownMenuButton1"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                data-icon="bell"
-                className="w-4"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"
-                ></path>
-              </svg>
-              <span className="text-white bg-red-700 absolute rounded-full text-xs -mt-2.5 ml-2 py-0 px-1.5">
-                1
-              </span>
-            </a>
-            <ul
-              className="
-      dropdown-menu
-      min-w-max
-      absolute
-      hidden
-      bg-white
-      text-base
-      z-50
-      float-left
-      py-2
-      list-none
-      text-left
-      rounded-lg
-      shadow-lg
-      mt-1
-      hidden
-      m-0
-      bg-clip-padding
-      border-none
-      left-auto
-      right-0
-    "
-              aria-labelledby="dropdownMenuButton1"
-            >
-              <li>
-                <a
-                  className="
-          dropdown-item
-          text-sm
-          py-2
-          px-4
-          font-normal
-          block
-          w-full
-          whitespace-nowrap
-          bg-transparent
-          text-gray-700
-          hover:bg-gray-100
-        "
-                  href="#"
-                >
-                  Action
-                </a>
-              </li>
-              <li>
-                <a
-                  className="
-          dropdown-item
-          text-sm
-          py-2
-          px-4
-          font-normal
-          block
-          w-full
-          whitespace-nowrap
-          bg-transparent
-          text-gray-700
-          hover:bg-gray-100
-        "
-                  href="#"
-                >
-                  Another action
-                </a>
-              </li>
-              <li>
-                <a
-                  className="
-          dropdown-item
-          text-sm
-          py-2
-          px-4
-          font-normal
-          block
-          w-full
-          whitespace-nowrap
-          bg-transparent
-          text-gray-700
-          hover:bg-gray-100
-        "
-                  href="#"
-                >
-                  Something else here
-                </a>
-              </li>
-            </ul>
+              rounded-full
+        form-control
+        block
+        w-full
+        px-3
+        py-1
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+      "
+              id="exampleSearch"
+              placeholder="search"
+            />
           </div>
+        </div>
+
+        {/* right */}
+        <div
+          className={`${
+            menu ? "flex-col" : "hidden"
+          } lg:flex items-center lg:relative gap-4`}
+        >
+          <div className="static inline lg:relative">
+            <a className="text-white mr-4" href="/">
+              <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+            </a>
+            <div className="hidden lg:block h-[2px] bg-white absolute w-7 top-9 left-[-4px]"></div>
+          </div>
+          <a className="text-white mr-4" href="/">
+            <FontAwesomeIcon icon={faUsers}></FontAwesomeIcon>
+          </a>
+          <a className="text-white mr-4" href="/">
+            <FontAwesomeIcon icon={faBell}></FontAwesomeIcon>
+          </a>
+          <a className="text-white mr-4" href="/">
+            <FontAwesomeIcon icon={faMessage}></FontAwesomeIcon>
+          </a>
+
           <div className="dropdown relative">
             <a
               className="dropdown-toggle flex items-center hidden-arrow"
-              href="#"
+              href="/"
               id="dropdownMenuButton2"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <img
-                src="https://mdbootstrap.com/img/new/avatars/2.jpg"
-                className="rounded-full"
-                style={secondStyle}
-                alt=""
-                loading="lazy"
-              />
+              <div className="image-text flex text-white gap-2 items-center">
+                <FontAwesomeIcon
+                  icon={faUserCircle}
+                  className="bg-gray-500 p-1 rounded-full"
+                ></FontAwesomeIcon>
+                <p>Adnan Chowdhury</p>
+                <p>
+                  <FontAwesomeIcon icon={faChevronDown} className="text-sm" />
+                </p>
+              </div>
             </a>
             <ul
               className="
@@ -274,7 +215,7 @@ const NavMenu = () => {
         text-gray-700
         hover:bg-gray-100
       "
-                  href="#"
+                  href="/"
                 >
                   Action
                 </a>
@@ -294,7 +235,7 @@ const NavMenu = () => {
         text-gray-700
         hover:bg-gray-100
       "
-                  href="#"
+                  href="/"
                 >
                   Another action
                 </a>
@@ -314,7 +255,7 @@ const NavMenu = () => {
         text-gray-700
         hover:bg-gray-100
       "
-                  href="#"
+                  href="/"
                 >
                   Something else here
                 </a>
