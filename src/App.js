@@ -1,10 +1,10 @@
 import "tw-elements";
-
+import NavMenu from "./components/NavBar/NavMenu";
 function App() {
   return (
-    <>
-      <h6 className="text-3xl">Hello</h6>
-    </>
+    <div>
+      <NavMenu></NavMenu>
+    </div>
   );
 }
 
