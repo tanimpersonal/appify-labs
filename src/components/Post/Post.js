@@ -22,8 +22,8 @@ const Post = () => {
           <Search></Search>
         </div>
       </div>
-      <div className="spacer w-full h-[2px] my-5 bg-[#F3F3F3] rounded-full"></div>
-      <div className="end flex gap-20 justify-center">
+      <div className="spacer lg:w-full h-[2px] my-5 bg-[#F3F3F3] rounded-full"></div>
+      <div className="end flex gap-2 lg:gap-20 justify-center">
         <div className="background">
           <FontAwesomeIcon icon={faCircleHalfStroke}></FontAwesomeIcon>
           <p>Background</p>

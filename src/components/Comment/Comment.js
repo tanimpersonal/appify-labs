@@ -37,7 +37,7 @@ const Comment = () => {
       <div className="like-reply flex px-12 gap-5 mt-[-12px]">
         <p>Like</p>
         <p>Reply</p>
-        <p>54 Minutes Ago</p>
+        <p className="text-sm mt-1 lg:mt-0 lg:text-base">54 Minutes Ago</p>
       </div>
       <div className="second-comment flex px-12 gap-2 my-5">
         <div className="icon">

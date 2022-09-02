@@ -10,7 +10,7 @@ const Search = () => {
             className="
         form-control
         block
-        w-[450px]
+        lg:w-[450px]
         px-3
         py-1.5
         text-base

@@ -5,7 +5,7 @@ import "./major.css";
 const Homepage = () => {
   return (
     <div className="bg-[#E9EBEE] w-screen">
-      <section className="w-[80%] mx-auto major">
+      <section className="w-[90%] mx-auto major">
         <div className="left p-5">
           <Left></Left>
         </div>
