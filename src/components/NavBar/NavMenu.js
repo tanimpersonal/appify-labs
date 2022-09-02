@@ -106,8 +106,8 @@ const NavMenu = () => {
         </div>
 
         {/* search */}
-        <div class={`${menu ? "my-5" : "hidden"} lg:flex mr-[100px]`}>
-          <div class="xl:w-96">
+        <div className={`${menu ? "my-5" : "hidden"} lg:flex mr-[100px]`}>
+          <div className="xl:w-96">
             <input
               type="search"
               className="

@@ -3,11 +3,11 @@ import React from "react";
 const Search = () => {
   return (
     <div>
-      <div class="w-[100%]">
+      <div className="w-[100%]">
         <div>
           <input
             type="search"
-            class="
+            className="
         form-control
         block
         w-[450px]
