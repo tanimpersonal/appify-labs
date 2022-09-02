@@ -1,5 +1,6 @@
 import {
   faComment,
+  faHeart,
   faShare,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
@@ -9,7 +10,23 @@ import React from "react";
 const Like = () => {
   return (
     <div>
-      <p className="text-right py-2">1 Comment</p>
+      <div className="icons flex justify-between">
+        <div className="sub-icons flex">
+          <p>
+            <FontAwesomeIcon
+              icon={faThumbsUp}
+              className="text-[#079CF8]"
+            ></FontAwesomeIcon>
+          </p>
+          <p>
+            <FontAwesomeIcon
+              className="text-[#E81B3D]"
+              icon={faHeart}
+            ></FontAwesomeIcon>
+          </p>
+        </div>
+        <p className="text-right">1 Comment</p>
+      </div>
       <div className="like-comment-share flex justify-evenly bg-[#FAFAFA] py-5 rounded-md">
         <div className="like flex items-center gap-2">
           <FontAwesomeIcon icon={faThumbsUp}></FontAwesomeIcon>

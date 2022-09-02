@@ -1,0 +1,6 @@
+.third {
+  background-image: url("../../assets//images/nature-3.jpg");
+  background-size: cover;
+  background-color: gray;
+  background-blend-mode: multiply;
+}

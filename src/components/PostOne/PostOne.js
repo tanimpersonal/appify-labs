@@ -6,7 +6,7 @@ import NamePlate from "../NamePlate/NamePlate";
 
 const PostOne = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white rounded-md p-1">
       <NamePlate></NamePlate>
       <div className="body px-5 py-1">
         <p>Your Favorite Game</p>
