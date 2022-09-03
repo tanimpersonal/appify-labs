@@ -1,4 +1,5 @@
 import React from "react";
+import NoPost from "../NoPost/NoPost";
 import Post from "../Post/Post";
 import PostFive from "../PostFive/PostFive";
 import PostFour from "../PostFour/PostFour";
@@ -24,6 +25,7 @@ const Middle = () => {
         <PostFive></PostFive>
         <PostSix></PostSix>
         <PostSeven></PostSeven>
+        <NoPost></NoPost>
       </div>
     </div>
   );

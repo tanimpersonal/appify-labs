@@ -1,4 +1,11 @@
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faFlag,
+  faPaperclip,
+  faPen,
+  faSave,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
@@ -39,6 +46,7 @@ const Dropdown = () => {
           min-w-max
           absolute
           hidden
+          px-2
           bg-white
           text-base
           z-50
@@ -56,7 +64,8 @@ const Dropdown = () => {
         "
               aria-labelledby="dropdownMenuButton1"
             >
-              <li>
+              <li className="flex items-center">
+                <FontAwesomeIcon icon={faSave}></FontAwesomeIcon>
                 <a
                   className="
               dropdown-item
@@ -73,10 +82,11 @@ const Dropdown = () => {
             "
                   href="/"
                 >
-                  Action
+                  Save Post
                 </a>
               </li>
-              <li>
+              <li className="flex items-center">
+                <FontAwesomeIcon icon={faPen}> </FontAwesomeIcon>
                 <a
                   className="
               dropdown-item
@@ -96,7 +106,8 @@ const Dropdown = () => {
                   Another action
                 </a>
               </li>
-              <li>
+              <li className="flex items-center">
+                <FontAwesomeIcon icon={faFlag}></FontAwesomeIcon>
                 <a
                   className="
               dropdown-item
@@ -113,7 +124,52 @@ const Dropdown = () => {
             "
                   href="/"
                 >
-                  Something else here
+                  Report Post
+                </a>
+              </li>
+              <li className="flex items-center">
+                <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                <a
+                  className="
+              dropdown-item
+              text-sm
+              py-2
+              px-4
+              font-normal
+              block
+              w-full
+              whitespace-nowrap
+              bg-transparent
+              text-gray-700
+              hover:bg-gray-100
+            "
+                  href="/"
+                >
+                  Delete Post
+                </a>
+              </li>
+              <li>
+                <div className="spacer h-[1px] bg-[#E8EAEC]"></div>
+              </li>
+              <li className="flex items-center">
+                <FontAwesomeIcon icon={faPaperclip}></FontAwesomeIcon>
+                <a
+                  className="
+              dropdown-item
+              text-sm
+              py-2
+              px-4
+              font-normal
+              block
+              w-full
+              whitespace-nowrap
+              bg-transparent
+              text-gray-700
+              hover:bg-gray-100
+            "
+                  href="/"
+                >
+                  Open Post in a new Tab
                 </a>
               </li>
             </ul>
