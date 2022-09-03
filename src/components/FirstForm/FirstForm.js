@@ -6,7 +6,7 @@ const FirstForm = () => {
   return (
     <div className="flex">
       <div>
-        <div className="form-check flex items-center gap-10 lg:gap-16 py-2">
+        <div className="form-check flex items-center gap-10 lg:gap-10 py-2">
           <div className="checkbox-label flex items-center gap-2">
             <input
               className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer"

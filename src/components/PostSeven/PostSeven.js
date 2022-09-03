@@ -7,7 +7,7 @@ const PostSeven = () => {
   return (
     <div className="p-1 bg-white my-5 rounded-md">
       <NamePlate></NamePlate>
-      <div className="body bg-gradient-to-tr from-[#F60912] to-[#0400FA] h-96 text-center leading-[384px] w-full text-3xl">
+      <div className="body bg-gradient-to-tr from-[#F60912] to-[#0400FA] w-full text-3xl h-96 flex justify-center items-center text-center">
         <p>Click your home icon to refresh feed</p>
       </div>
       <div className="body-2 p-5">
