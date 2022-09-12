@@ -6,6 +6,7 @@ function App() {
     <div>
       <NavMenu></NavMenu>
       <Homepage></Homepage>
+
     </div>
   );
 }
